@@ -18,6 +18,7 @@ from django.urls import path
 from products.views import ProductList, ProductDetail, ProductCreate, ProductUpdate, ProductDelete
 
 urlpatterns = [
+    path('grappelli/', include('grappelli.urls')),
     path('', ProductList.as_view(), name='home'),
     path('products/', ProductList.as_view(), name='product_list'),
     path('products/create/', ProductCreate.as_view(), name='product_create'),
